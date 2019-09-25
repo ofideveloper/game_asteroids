@@ -3,7 +3,7 @@ var DEBUG = process.env.NODE_ENV !== 'production';
 
 module.exports = {
   entry: {
-    index: ['./app/scripts/game.js']
+    index: ['./app/game.js']
   },
   output: {
     filename: 'bundle.js',
