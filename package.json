@@ -5,11 +5,11 @@
     "start": "webpack-dev-server --mode development",
     "webpack": "webpack --mode development",
     "build": "webpack --mode production",
-    "format": "find app -name '*.js' | xargs -I{} ./node_modules/.bin/prettier --write --single-quote {}",
+    "format":
+      "find app -name '*.js' | xargs -I{} ./node_modules/.bin/prettier --write --single-quote {}",
     "prewebpack": "npm run clean",
     "precommit": "lint-staged",
     "clean": "rm -rf ./build && mkdir ./build",
-    "lint": "eslint ./app/**/*.js",
     "reactman": "reactman --config ./templates/reactman.config.js"
   },
   "dependencies": {
@@ -40,13 +40,8 @@
   "engines": {
     "node": ">=8.0.0"
   },
-  "plugins": [
-    "prettier"
-  ],
+  "plugins": ["prettier"],
   "lint-staged": {
-    "*.{js,json}": [
-      "prettier --write --single-quote",
-      "git add"
-    ]
+    "*.{js,json}": ["prettier --write --single-quote", "git add"]
   }
 }
